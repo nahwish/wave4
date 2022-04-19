@@ -8,10 +8,10 @@ Ejemplo:
 calculatePrice("play", 30000)
 
 output : "el costo de envio de una play es de 500 pesos y el precio total seria de 30500 pesos"
-*******************************************************************************/
+**********************************************************************************/
 //Tu código acá
 
-
+let calculatePrice;
 
 
 
