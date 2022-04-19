@@ -11,7 +11,7 @@ output : "el costo de envio de una play es de 500 pesos y el precio total seria 
 *******************************************************************************/
 //Tu código acá
 
-
+let calculatePrice;
 
 
 
