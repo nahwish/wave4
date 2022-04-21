@@ -2,7 +2,7 @@ const { it, expect } = require("@jest/globals");
 const { calculatePrice } = require("./index");
 
 describe("Fundamentos js", () => {
-	describe("Los costos de envío deben funcionar correctamente", () => {
+	describe("Debe devolver un string con el costo de envio y el precio total", () => {
 		it("CalculatePrice debe ser una función", () => {
 			expect(typeof calculatePrice).toBe("function");
 		});
@@ -20,7 +20,7 @@ describe("Fundamentos js", () => {
 			expect(calculatePrice("smart", 999)).not.toMatch(/700/);
 		});
 	});
-	xdescribe("El precio total debe ser la suma del precio del producto + el costo de envío", () => {
+	describe("El precio total debe ser la suma del precio del producto + el costo de envío", () => {
 		it("Los productos con precio menor a 2000 deben sumar 300 de envío al precio final", () => {
 			expect(calculatePrice("PSP", 1500)).toMatch(/1800/);
 			expect(calculatePrice("PSP", 700)).toMatch(/1000/);
@@ -37,7 +37,9 @@ describe("Fundamentos js", () => {
 			expect(calculatePrice("PSP", 10000)).toMatch(/10700/);
 		});
 	});
-	xdescribe("Extra", () => {
+	
+	
+	describe("Extra", () => {
 		it('Si el precio es 0 o un numero negativo, debe retornar el string "Error" ', () => {
 			expect(calculatePrice("switch", -5)).toMatch(/Error/i);
 			expect(calculatePrice("switch", 0)).toMatch(/Error/i);
